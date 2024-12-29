@@ -1,0 +1,9 @@
+.product-list {
+  padding-top: 70px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding-inline: 100px;
+  gap: 20px;
+  flex-wrap: wrap;
+}
