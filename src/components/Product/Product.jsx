@@ -1,6 +1,9 @@
 import React from 'react';
+import { useDispatch } from 'react-redux';
+import { addItemToCart } from '../../store/slices/cartSlice';
 import './Product.css';
 const Product = ({ product }) => {
+  const dispatch = useDispatch();
   const productStyle = {
     display: 'flex',
     flexDirection: 'column',
@@ -13,7 +16,9 @@ const Product = ({ product }) => {
       <img src={product.image} alt={product.name} />
       <h2>{product.name}</h2>
       <span>{product.price}</span>
-      <button>Add to Cart</button>
+      <button onClick={() => dispatch(addItemToCart(product))}>
+        Add to Cart
+      </button>
     </div>
   );
 };
